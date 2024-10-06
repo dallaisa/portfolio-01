@@ -7,7 +7,6 @@ This is my portfolio project where I present my list of projects, a brief person
 
 - [Project Description](#project-description)
 - [Technologies and Libraries Used](#technologies-and-libraries-used)
-- [Requirements](#requirements)
 - [Installation](#installation)
 - [How to Use](#how-to-use)
 - [Features](#features)
@@ -94,4 +93,4 @@ This portfolio was developed to showcase my projects and skills in a clear and i
 
 ## Contact
 
-For any questions or feedback, feel free to contact me through my [GitHub profile](https://github.com/your_username).
+For any questions or feedback, feel free to contact me through my email: isabelledallacarlesso@gmail.com
