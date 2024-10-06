@@ -1,19 +1,28 @@
 import React from 'react';
-import headerImage from '../header.png'; // Caminho da imagem
+import headerImage from '../header.png'; 
 
 const Header = () => {
-  // Função para rolar até a seção "About"
+
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' }); // Rolagem suave
+      aboutSection.scrollIntoView({ behavior: 'smooth' }); 
+    }
+  };
+
+
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' }); 
     }
   };
 
   return (
     <div
+      id="home" 
       className="relative w-full h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${headerImage})` }} // Usando a imagem importada
+      style={{ backgroundImage: `url(${headerImage})` }} 
     >
       {/* Texto centralizado */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
@@ -22,12 +31,15 @@ const Header = () => {
 
         {/* Botões */}
         <div className="mt-8 flex space-x-6">
-          <button className="px-12 py-2 text-white font-bold rounded-full bg-gradient-to-b from-purple-400 to-purple-600 hover:opacity-90 transition duration-300 text-lg animate-fade-in delay-200">
+          <button 
+            className="px-12 py-2 text-white font-bold rounded-full bg-gradient-to-b from-purple-400 to-purple-600 hover:opacity-90 transition duration-300 text-lg animate-fade-in delay-200"
+            onClick={scrollToProjects} 
+          >
             See now
           </button>
           <button 
             className="px-12 py-2 border border-white text-white font-bold rounded-full bg-transparent hover:bg-white hover:text-purple-600 transition duration-300 text-lg animate-fade-in delay-200"
-            onClick={scrollToAbout} // Adicionando a função de rolagem
+            onClick={scrollToAbout} 
           >
             About me
           </button>

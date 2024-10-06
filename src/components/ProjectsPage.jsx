@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 import { TERipple } from 'tw-elements-react';
@@ -35,17 +36,12 @@ const CardWithRippleExample = ({ title, content, image, youtubeLink, githubLink 
   );
 };
 
-const Projects = () => {
+const ProjectsPage = () => {
   return (
-    <section className="bg-[#0d041f] py-20" id="projects">
-      <div className="container mx-auto flex items-center justify-between px-5">
-        <h2 className="text-5xl font-bold text-white">My recent Projects</h2>
-        <Link to="/projects">
-          <button className="px-12 py-2 border border-white text-white font-bold rounded-full bg-transparent hover:bg-white hover:text-purple-950 transition duration-300 text-lg">
-            See more
-          </button>
-        </Link>
-      </div>
+    <div className="bg-[#0d041f] text-white min-h-screen p-10">
+      <h1 className="text-4xl font-bold mb-6">Projects</h1>
+      <p className="text-lg mb-6">All my programming and graphic design projects.</p>
+      
       <div className="container mx-auto flex flex-wrap justify-center gap-4 p-5">
         <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
           <CardWithRippleExample 
@@ -71,9 +67,33 @@ const Projects = () => {
             githubLink="https://github.com/camipzcunha/E-Teen" 
           />
         </div>
+        <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
+          <CardWithRippleExample 
+            title="Demo reel projects logos" 
+            content="Video of my logo projects 2023." 
+            image="https://i.pinimg.com/564x/66/b7/c3/66b7c392eff5cef2ab54d7268c6505d5.jpg" 
+            youtubeLink="https://youtu.be/oPXEs7WceHM" 
+          />
+        </div>
+        <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
+          <CardWithRippleExample 
+            title="responsive registration 01" 
+            content="Responsive registration for Mahindra E-Teens." 
+            image="https://i.pinimg.com/564x/3b/55/19/3b55190045d9130acabb5f7e1c9f2a18.jpg" 
+            githubLink="https://github.com/dallaisa/responsivoCadastro" 
+          />
+        </div>
+        <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
+          <CardWithRippleExample 
+            title="registration exemple" 
+            content="old registration for Mahindra E-Kids." 
+            image="https://i.pinimg.com/736x/6d/b7/c9/6db7c9883f854ef5b3a0bb8f35c26b40.jpg" 
+            youtubeLink="https://youtu.be/bUaIru7VILA" 
+          />
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Projects;
+export default ProjectsPage;

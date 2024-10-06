@@ -3,7 +3,7 @@ import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 
 const Contact = () => {
   return (
-    <section className="bg-black w-full h-auto">
+    <section id="contact" className="bg-black w-full h-auto">
       <div className="grid lg:grid-cols-2 items-center gap-14 sm:p-8 p-4 font-[sans-serif] max-w-full">
         <div>
           <h1 className="text-4xl font-bold text-white">Get in Touch</h1>
@@ -43,7 +43,9 @@ const Contact = () => {
               <FaFacebookF className="text-white" />
             </li>
             <li className="bg-[#1a082e] hover:bg-[#1a082e] h-10 w-10 rounded-full flex items-center justify-center">
-              <FaLinkedinIn className="text-white" />
+              <a href="https://www.linkedin.com/in/isabelledalla/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedinIn className="text-white" />
+              </a>
             </li>
           </ul>
         </div>
@@ -67,7 +69,7 @@ const Contact = () => {
             ></textarea>
             <button
               type="submit"
-              className="py-3 px-6 bg-[#1a082e] hover:bg-[#1a082e] text-white rounded-lg"
+              className="py-3 px-6 bg-[#1a082e] hover:bg-[#1a082e] rounded text-white"
             >
               Send Message
             </button>
