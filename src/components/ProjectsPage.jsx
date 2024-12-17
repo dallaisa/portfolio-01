@@ -1,24 +1,19 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom'; 
 import { TERipple } from 'tw-elements-react';
-import { FaGithub, FaYoutube } from "react-icons/fa6";
+import { FaGithub, FaYoutube, FaRegFilePdf } from "react-icons/fa6"; // Importação dos ícones
 
-const CardWithRippleExample = ({ title, content, image, youtubeLink, githubLink }) => {
+const CardWithRippleExample = ({ title, content, image, youtubeLink, githubLink, pdfLink }) => {
   return (
     <div className="block rounded-lg bg-black text-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
       <TERipple>
         <div className="relative overflow-hidden bg-cover bg-no-repeat">
           <img className="rounded-t-lg" src={image} alt={title} />
-          <a href="#!">
-            <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-          </a>
+          <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full bg-[hsla(0,0%,98%,0.15)] opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
         </div>
       </TERipple>
       <div className="p-6">
         <h5 className="mb-2 text-xl font-medium leading-tight">{title}</h5>
         <p className="mb-4 text-base">{content}</p>
-        {/* Ícones de GitHub e YouTube */}
         <div className="flex justify-start space-x-4 mt-4">
           {youtubeLink && (
             <a href={youtubeLink} target="_blank" rel="noopener noreferrer">
@@ -28,6 +23,11 @@ const CardWithRippleExample = ({ title, content, image, youtubeLink, githubLink 
           {githubLink && (
             <a href={githubLink} target="_blank" rel="noopener noreferrer">
               <FaGithub className="text-white text-2xl hover:text-gray-400 transition duration-300" />
+            </a>
+          )}
+          {pdfLink && (
+            <a href={pdfLink} target="_blank" rel="noopener noreferrer">
+              <FaRegFilePdf className="text-white text-2xl hover:text-red-600 transition duration-300" />
             </a>
           )}
         </div>
@@ -86,9 +86,25 @@ const ProjectsPage = () => {
         <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
           <CardWithRippleExample 
             title="registration exemple" 
-            content="old registration for Mahindra E-Kids." 
+            content="Old registration for Mahindra E-Kids." 
             image="https://i.pinimg.com/736x/6d/b7/c9/6db7c9883f854ef5b3a0bb8f35c26b40.jpg" 
             youtubeLink="https://youtu.be/bUaIru7VILA" 
+          />
+        </div>
+        <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
+          <CardWithRippleExample 
+            title="Prototype Melodia Design" 
+            content="Banner design for the Melodia website." 
+            image="https://i.pinimg.com/736x/3f/bc/a7/3fbca76f29a04267d81c86452ef6770d.jpg" 
+            pdfLink="https://drive.google.com/file/d/1p_cJ9Fnw9esSAEHBOc7RsWlTCRbYLaT1/view?usp=sharing"
+          />
+        </div>
+        <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
+          <CardWithRippleExample 
+            title="BlissWear brand prototype" 
+            content="Visual identity of the virtual store of chic lingerie, pajamas and bathrobes." 
+            image="https://i.pinimg.com/736x/c3/7a/f4/c37af4c21e14afe11c25bfa43244da44.jpg" 
+            pdfLink="https://drive.google.com/file/d/1Dn1BKmJTqNpzKtBHWzfhmRTy8kHYiex-/view?usp=sharing"
           />
         </div>
       </div>
